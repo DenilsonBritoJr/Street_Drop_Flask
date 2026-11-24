@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Street Drop - Fale Conosco{% endblock %}
+
+{% block content %}
+<main class="container py-5">
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url_for('index') }}" class="text-dark fw-bold text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Fale Conosco</li>
+        </ol>
+    </nav>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8 bg-light p-4 p-md-5 rounded border text-dark shadow-sm">
+            <h1 class="fw-bold mb-3 text-center">Fale Conosco</h1>
+            <p class="text-secondary text-center mb-4">Tem alguma sugestão de drop, pauta, dúvida ou quer mandar um salve? Preencha os campos abaixo.</p>
+
+            <!-- Exibe mensagem de confirmação após o envio -->
+            {% if sucesso %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Mensagem enviada com sucesso! Em breve entraremos em contato.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endif %}
+
+            <!-- Formulário preparado para envio via POST -->
+            <form action="{{ url_for('contato') }}" method="POST">
+                <div class="mb-3">
+                    <label for="nome" class="form-label fw-bold">Nome completo</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-bold">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="assunto" class="form-label fw-bold">Assunto</label>
+                    <select class="form-select" id="assunto" name="assunto" required>
+                        <option value="" selected disabled>Selecione um assunto...</option>
+                        <option value="Sugestão de Pauta / Drop">Sugestão de Pauta / Drop</option>
+                        <option value="Parcerias">Parcerias</option>
+                        <option value="Dúvidas ou Feedback">Dúvidas ou Feedback</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="mensagem" class="form-label fw-bold">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-dark btn-lg fw-bold">Enviar Mensagem</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

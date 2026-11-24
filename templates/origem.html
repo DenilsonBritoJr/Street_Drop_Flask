@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Street Drop - Origem{% endblock %}
+
+{% block content %}
+<main class="container py-5">
+    
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url_for('index') }}" class="text-dark fw-bold text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Origem do Streetwear</li>
+        </ol>
+    </nav>
+
+    <article class="streetwear-content bg-light p-4 p-md-5 rounded border text-dark">
+        <img src="{{ url_for('static', filename='imagens/moda_streetwear_anos_90.jpg') }}" alt="Banner do Artigo" class="img-fluid mb-4 rounded shadow-sm img-artigo">           
+        <h1 class="text-center mb-4 fw-bold">O que é Streetwear?</h1>
+        <p class="fs-6 text-secondary text-justify mb-4">
+            O streetwear é um estilo de moda casual que ganhou força entre os jovens urbanos a partir das décadas de 1980 e 1990. Inicialmente associado a diferentes subculturas, como o hip hop, o skate e o surfe, o estilo passou a representar não apenas uma forma de se vestir, mas também uma maneira de expressar identidade, criatividade e individualidade.
+        </p>
+        <p class="fs-6 text-secondary text-justify mb-5">
+            Com o passar dos anos, o que começou como uma tendência ligada às ruas conquistou espaço na indústria da moda e passou a influenciar grandes marcas e estilistas. Atualmente, o streetwear está presente em diferentes públicos e combina conforto, personalidade e elementos da cultura urbana.
+        </p>
+
+        <section class="mb-5">
+            <h2 class="fw-bold mb-3 border-bottom pb-2">As origens do Streetwear</h2>
+            <p class="fs-6 text-secondary text-justify">
+                O conceito de streetwear está diretamente relacionado ao crescimento das culturas urbanas durante as décadas de 1980 e 1990. A cena do hip hop de Nova York é frequentemente associada à popularização desse estilo, que surgiu como uma alternativa às normas tradicionais da moda.
+            </p>
+        </section>
+
+        <section class="mb-2">
+            <h2 class="fw-bold mb-3 border-bottom pb-2">A evolução do Streetwear para a alta moda</h2>
+            <p class="fs-6 text-secondary text-justify mb-4">
+                A aproximação entre streetwear e alta moda pode parecer contraditória. Afinal, o streetwear surgiu justamente como uma alternativa às normas tradicionais da indústria da moda. Entretanto, sua popularização fez com que seus elementos passassem a influenciar também grandes estilistas e marcas.
+            </p>
+            <p class="fs-6 text-secondary text-justify">
+                O que antes era associado principalmente às ruas passou a aparecer em coleções, lojas e eventos importantes da indústria da moda. Dessa forma, o streetwear deixou de ocupar apenas um espaço alternativo e passou a fazer parte do mercado da moda contemporânea.
+            </p>
+        </section>
+    </article>
+</main>
+{% endblock %}

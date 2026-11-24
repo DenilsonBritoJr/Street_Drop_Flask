@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Street Drop - Sobre Nós{% endblock %}
+
+{% block content %}
+<div class="container mb-5">
+    <img class="img-fluid rounded shadow-sm w-100 banner-img" src="{{ url_for('static', filename='imagens/Sobre.png') }}" alt="Banner Street Drop Sobre Nós">
+</div>
+
+<main class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 bg-light p-4 p-md-5 rounded border text-dark">
+            <h1 class="fw-bold mb-4 text-center">Nossa Essência</h1>
+            <p class="fs-5 text-secondary text-justify mb-4">StreetDrop não nasceu para observar a rua da janela, mas para dar voz ao movimento vivo que acontece no asfalto. A cultura urbana sempre foi construída por corpos plurais: pessoas negras, periféricas, corpos trans, não binários e mulheres que transformaram a calçada em espaço de resistência, arte e autoexpressão.</p>
+            <p class="fs-5 text-secondary text-justify mb-4">No entanto, por muito tempo, a informação sobre o universo do streetwear e da moda das ruas esteve concentrada em narrativas distantes da essência de quem realmente cria a tendência nas esquinas. O StreetDrop surge exatamente no ponto de ruptura dessa estrutura, redefinindo quem conta e quem protagoniza essas histórias.</p>
+            <p class="fs-5 text-secondary text-justify mb-4">Acreditamos que o estilo urbano ultrapassa o vestuário superficial; trata-se de um manifesto visual, de identidade, ancestralidade e pertencimento. Cada peça de roupa, cada calçado e cada expressão estética carrega um contexto cultural profundo. Por isso, a inclusão racial e a diversidade de gênero não são pilares secundários ou estratégias temporárias para nós, mas sim a alma e a bússola que orientam cada conteúdo, curadoria e projeto que desenvolvemos.</p>
+            <p class="fs-5 text-secondary text-justify mb-4">Nossa missão é democratizar a informação e amplificar vozes que historicamente moldaram o ecossistema urbano sem o devido reconhecimento. Damos espaço de destaque a estilistas negros, artistas independentes, colecionadores periféricos, modelos diversos e mentes criativas de todas as identidades de gênero. Queremos garantir que, ao navegar pela nossa plataforma, cada pessoa enxergue um espelho fiel da diversidade que pulsa nas cidades, com a qualidade e o respeito que essa cultura merece.</p>
+            <p class="fs-5 fw-bold text-dark text-justify mt-5">O StreetDrop é a união da paixão pelo streetwear com o compromisso inegociável do impacto social. Somos a plataforma de quem vive a rua com autenticidade, de quem não aceita caixas reducionistas e de quem entende a moda urbana como ferramenta de transformação e liberdade. A rua é plural, viva e democrática. E a história que estamos escrevendo juntos começa no primeiro drop.</p>
+        </div>
+    </div>
+</main>
+{% endblock %}
