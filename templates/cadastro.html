@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Fale Conosco - {% endblock %}
+
+{% block content %}
+<main class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-dark text-white">
+                    <h4 class="mb-0">Fale Conosco</h4>
+                </div>
+                <div class="card-body p-4">
+                    <p class="text-muted mb-4">Envie sua dúvida, sugestão ou feedback sobre os drops e conteúdos da Street Drop.</p>
+                    <form action="{{ url_for('cadastro') }}" method="POST">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label fw-bold">Nome completo</label>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">E-mail</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="assunto" class="form-label fw-bold">Assunto</label>
+                            <input type="text" class="form-control" id="assunto" name="assunto" placeholder="Ex: Dúvida sobre lançamento" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="mensagem" class="form-label fw-bold">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="{{ url_for('listar') }}" class="btn btn-outline-secondary">Ver Mensagens</a>
+                            <button type="submit" class="btn btn-dark px-4">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

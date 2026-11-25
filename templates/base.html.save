@@ -1,0 +1,6 @@
+meta nm="initial-scale=1.-- O bloco title permite que cada página tenha um título diferente na aba do navegador -->  <ti% block title %}Street Drop{% endblock %}</title> y"imge/x-icon" href="{{ <nkref="https://cdn.jsdlivr.net/npm/bootstrap@5.3.3/dist/css/boostrap.min.css" rel="stylesheet">
+  <ieet" hre="{{ url_fo('static', filename='st
+</ vh-10 a todas as páginas) -        <diclass="coinr d-flex flex-wrap align-items-center justify-content-between gap-2">
+          <ar('indx') }}" ="text-white text-decortion-none h3 mb-0 fw-bold">Street Dop</a>          <nav class="n
+              <a hef="{ url_for('index') }}" class="btn btn-outline-ligh me-2">Home</a>            href="{{ url_for('sobre') }}" class="btn btn-outline-light me-2">Sobre nós</a>           </nav
+        form class="d-f-form" role="se    <input class="fom-contrarch" plaeholder=" que você procura?" aria-lab
